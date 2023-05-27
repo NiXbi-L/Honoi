@@ -1,0 +1,4 @@
+C:\Users\DiXer\source\repos\HonoI Towers\HonoI Towers\Debug\HonoITowers.MyForm.resources
+C:\Users\DiXer\source\repos\HonoI Towers\HonoI Towers\Debug\HonoI Towers.vcxproj.GenerateResource.cache
+C:\Users\DiXer\source\repos\HonoI Towers\HonoI Towers\Debug\HonoI Towers.vcxproj.AssemblyReference.cache
+C:\Users\DiXer\source\repos\HonoI Towers\HonoI Towers\Debug\HonoITowers.Game.resources
