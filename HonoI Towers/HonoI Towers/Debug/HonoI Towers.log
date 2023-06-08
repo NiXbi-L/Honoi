@@ -1,5 +1,6 @@
 ﻿  Game.cpp
-  MyForm.cpp
-  Generating Code...
-  Game.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  HonoI Towers.vcxproj -> C:\Users\DiXer\source\repos\HonoI Towers\Debug\HonoI Towers.exe
+C:\Users\Administrator\source\repos\HonoI Towers\HonoI Towers\Game.h(49,59): error C3443: The default member initializer for 'HonoITowers::Game::tower1' is recursive
+C:\Users\Administrator\source\repos\HonoI Towers\HonoI Towers\Game.h(49,59): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  INTERNAL COMPILER ERROR in 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe'
+      Please choose the Technical Support command on the Visual C++
+      Help menu, or open the Technical Support help file for more information

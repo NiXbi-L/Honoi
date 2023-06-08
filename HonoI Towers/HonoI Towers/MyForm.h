@@ -1,5 +1,6 @@
 #pragma once
 #include "Game.h"
+
 namespace HonoITowers {
 
 	using namespace System;
@@ -8,7 +9,6 @@ namespace HonoITowers {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -40,6 +40,8 @@ namespace HonoITowers {
 	private: System::Windows::Forms::TrackBar^ trackBar1;
 	private: System::Windows::Forms::Label^ rols;
 	private: System::Windows::Forms::Button^ button1;
+
+	private: int rolss = 0;;
 
 	private:
 		/// <summary>
@@ -86,7 +88,7 @@ namespace HonoITowers {
 			// trackBar1
 			// 
 			this->trackBar1->Location = System::Drawing::Point(12, 113);
-			this->trackBar1->Maximum = 8;
+			this->trackBar1->Maximum = 5;
 			this->trackBar1->Minimum = 1;
 			this->trackBar1->Name = L"trackBar1";
 			this->trackBar1->Size = System::Drawing::Size(222, 45);
@@ -97,19 +99,19 @@ namespace HonoITowers {
 			// rols
 			// 
 			this->rols->AutoSize = true;
-			this->rols->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->rols->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->rols->ForeColor = System::Drawing::SystemColors::Control;
 			this->rols->Location = System::Drawing::Point(12, 87);
 			this->rols->Name = L"rols";
-			this->rols->Size = System::Drawing::Size(134, 23);
+			this->rols->Size = System::Drawing::Size(163, 24);
 			this->rols->TabIndex = 3;
 			this->rols->Text = L"Кол-во клоец: 1";
 			// 
 			// button1
 			// 
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::SystemColors::Control;
 			this->button1->Location = System::Drawing::Point(16, 164);
 			this->button1->Name = L"button1";
@@ -132,7 +134,6 @@ namespace HonoITowers {
 			this->Controls->Add(this->Logo);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar1))->EndInit();
 			this->ResumeLayout(false);
@@ -146,8 +147,9 @@ namespace HonoITowers {
 		delete value;
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		rolss = this->trackBar1->Value;
 		this->Hide(); //скрываем окно 
-		Game^ game = gcnew Game(); //выделяем память под новое окно
+		Game^ game = gcnew Game(rolss); //выделяем память под новое окно
 		game->Show(); //открываем игровое окно 
 	}
 };
